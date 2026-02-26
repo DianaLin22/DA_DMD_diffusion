@@ -6,7 +6,7 @@
 **DMD** decomposes noisy input (CARS spectra) into different modes based on their frequency. **Deep learning** part uses SE Block for channel atention to weigh relevance of modes and then a CNN Block to extract the final clean output (Raman spectra). The noise (Non-resonant Background) has low frequency while the clean spectra (Raman signatures) have higher frequencies. This criteria makes the background removal possible. To know more (link to paper). 
 
 <p align="center">
-  <img src="images/Method_diagram.pdf" width="800" alt="DA-DMD method">
+  <img src="images/Method_diagram.png" width="800" alt="DA-DMD method">
   <br>
   <em>DA-DMD method.</em>
 </p>
