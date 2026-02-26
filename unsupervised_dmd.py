@@ -103,7 +103,7 @@ if __name__ == "__main__":
     ax[1].plot(raman, color='g', label='Raman')
     ax[1].legend()
     for i in range(6):
-        ax[2+i].plot(5 * np.abs(dmd.modes[:, i]), color="#0072B2", label=f'Mode {i+1}')
+        ax[2+i].plot(5 * np.abs(dmd.modes[:, i]), color="#0072B2", label=f'Mode {i+1}') # scaled for visualization
         ax[2+i].legend()
 
     ax[3].set_ylabel("Intensity (a.u.)", labelpad=50)
@@ -118,7 +118,7 @@ if __name__ == "__main__":
         modes1 = dmd.modes[:, cluster_indices]
         dynamics1 = dmd.dynamics[cluster_indices, :]
 
-        reconstructed_clusters[cluster] = 5 * np.abs(np.sum(modes1 @ dynamics1, axis=1))
+        reconstructed_clusters[cluster] = np.abs(np.sum(modes1 @ dynamics1, axis=1))
 
 
     mod_indices = np.arange(2, 3, 1)
@@ -151,7 +151,7 @@ if __name__ == "__main__":
     cluster_indices = np.where(om_class != ind)[0]
     modes1 = dmd.modes[:, cluster_indices]
     dynamics1 = dmd.dynamics[cluster_indices, :]
-    reconstructed_clusters = 5 * np.abs(np.sum(modes1 @ dynamics1, axis=1))
+    reconstructed_clusters = np.abs(np.sum(modes1 @ dynamics1, axis=1))
 
 
     shift = Ndelay // 2
