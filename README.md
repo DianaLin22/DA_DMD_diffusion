@@ -1,6 +1,9 @@
 <div align="center">
 
 # **Deep Learning-Assisted Dynamic Mode Decomposition (DA-DMD) for NRB removal in CARS Spectroscopy**
+
+[![DOI: 10.1007/978-3-032-12840-9_4](https://img.shields.io/badge/DOI-paper-blue)](https://doi.org/10.1007/978-3-032-12840-9_4)
+
 </div>
 
 **DMD** decomposes noisy input (CARS spectra) into different modes based on their frequency. **Deep learning** part uses SE Block for channel atention to weigh relevance of modes and then a CNN Block to extract the final clean output (Raman spectra). The noise (Non-resonant Background) has low frequency while the clean spectra (Raman signatures) have higher frequencies. This criteria makes the background removal possible. To know more (link to paper). 
@@ -44,15 +47,24 @@ pip install -r requirements.txt
 ## Citation
 **Authors:** Adithya Ashok Chalain Valapil, Carl Messerschmidt, Maha Shadaydeh, Michael Schmitt, Jürgen Popp, Joachim Denzler.
 
-**Publisher:** DAGM German Conference on Pattern Recognition (DAGM-GCPR) 2025
+**Presented at:** DAGM German Conference on Pattern Recognition (DAGM-GCPR) 2025
 
 **BibTeX:**
 
 ```bibtex
-@inproceedings{valapil2025dadmd,
-  title     = {Deep Learning-Assisted Dynamic Mode Decomposition for NRB removal in CARS Spectroscopy},
-  author    = {Adithya Ashok {Chalain Valapil} and Carl Messerschmidt and Maha Shadaydeh and Michael Schmitt and Jürgen Popp and Joachim Denzler},
-  booktitle = {DAGM German Conference on Pattern Recognition (DAGM-GCPR)},
-  year      = {2025}
+@InProceedings{valapil2025dadmd,
+author="Chalain Valapil, Adithya Ashok
+and Messerschmidt, Carl
+and Shadaydeh, Maha
+and Schmitt, Michael
+and Popp, J{\"u}rgen
+and Denzler, Joachim",
+title="Deep Learning-Assisted Dynamic Mode Decomposition for Non-resonant Background Removal in CARS Spectroscopy",
+booktitle="Pattern Recognition",
+year="2026",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="41--56",
+isbn="978-3-032-12840-9"
 }
 ```
