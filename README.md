@@ -60,11 +60,13 @@ and Schmitt, Michael
 and Popp, J{\"u}rgen
 and Denzler, Joachim",
 title="Deep Learning-Assisted Dynamic Mode Decomposition for Non-resonant Background Removal in CARS Spectroscopy",
-booktitle="Pattern Recognition",
+booktitle="Pattern Recognition (DAGM GCPR 2025)",
+series="Lecture Notes in Computer Science",
 year="2026",
 publisher="Springer Nature Switzerland",
 address="Cham",
 pages="41--56",
-isbn="978-3-032-12840-9"
+isbn="978-3-032-12840-9",
+doi="https://doi.org/10.1007/978-3-032-12840-9_4"
 }
 ```
