@@ -3,7 +3,7 @@
 # **Deep Learning-Assisted Dynamic Mode Decomposition (DA-DMD) for NRB removal in CARS Spectroscopy**
 
 [![DOI: 10.1007/978-3-032-12840-9_4](https://img.shields.io/badge/DOI-Paper-blue)](https://doi.org/10.1007/978-3-032-12840-9_4)
-[![Website: 10.1007/978-3-032-12840-9_4](https://img.shields.io/badge/Website-Info-green)]([https://doi.org/10.1007/978-3-032-12840-9_4](https://spectra-analysis.github.io/dadmd/))
+[![Website: 10.1007/978-3-032-12840-9_4](https://img.shields.io/badge/Website-Info-green)](https://spectra-analysis.github.io/dadmd/)
 
 </div>
 
