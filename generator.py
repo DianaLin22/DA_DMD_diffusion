@@ -38,15 +38,15 @@ def sigmoid(x,c,b):
 
 
 # ##### Sigmoid SPECNET NRB ####
-# def generate_nrb():  
-#     bs = np.random.normal(10,5,2)
-#     c1 = np.random.normal(0.2,0.3)
-#     c2 = np.random.normal(0.7,.3)
-#     cs = np.r_[c1,c2]
-#     sig1 = sigmoid(nu, cs[0], bs[0])
-#     sig2 = sigmoid(nu, cs[1], -bs[1])
-#     nrb  = sig1*sig2
-#     return nrb
+def generate_nrb_sigmoid():  
+    bs = np.random.normal(10,5,2)
+    c1 = np.random.normal(0.2,0.3)
+    c2 = np.random.normal(0.7,.3)
+    cs = np.r_[c1,c2]
+    sig1 = sigmoid(nu, cs[0], bs[0])
+    sig2 = sigmoid(nu, cs[1], -bs[1])
+    nrb  = sig1*sig2
+    return nrb
 
 # ##### One Sigmoid NRB ####
 # j=[-2,-1,1,2]
@@ -62,7 +62,7 @@ def sigmoid(x,c,b):
 
 
 ### Polynomial NRB ####
-def generate_nrb():
+def generate_nrb_poly():
     """
     Produces a normalized shape for the Polynomial NRB
     outputs
@@ -82,19 +82,22 @@ def get_spectrum():
     Outputs cars: (n_points,)
         chi3.imag: (n_points,) """
     chi3 = build_chi3(random_chi3())*np.random.uniform(0.3,1)
-    nrb = generate_nrb()
+    if np.random.rand() < 0.5:
+        nrb = generate_nrb_sigmoid()
+    else:
+        nrb = generate_nrb_poly()
     noise = np.random.randn(n_points)*np.random.uniform(0.0005,0.003)
     cars = ((np.abs(chi3+nrb)**2)/2+noise)
     return cars, chi3.imag
 
 def generate_batch(size = 1):
-    X = np.empty((size, n_points,1))
+    X = np.empty((size,n_points))
     y = np.empty((size,n_points))
 
     for i in range(size):
-        X[i,:,0], y[i,:] = get_spectrum()
+        X[i,:], y[i,:] = get_spectrum()
     return X, y
 
-xnew, ynew = generate_batch(10000)
-np.save("synthetic_data/cars_10000.npy", xnew)
-np.save("synthetic_data/raman_10000.npy", ynew)
+xnew, ynew = generate_batch(5000)
+np.save("synthetic_data/cars_5000.npy", xnew)
+np.save("synthetic_data/raman_5000.npy", ynew)
