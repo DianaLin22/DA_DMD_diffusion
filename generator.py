@@ -7,7 +7,7 @@ plt.close('all')
 
 ## Spectral characterstics##
 max_features = 25
-n_points = 1000
+n_points = 656
 nu = np.linspace(0,1,n_points)
 
 
